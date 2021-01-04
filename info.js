@@ -495,3 +495,299 @@ anotherAddEventListener("KeyPress", function(event) {
 });
 //{eventType:"KeyPress", key: "p", durationOfKeyPress: 2} joobu bul.ushunu berdi
 // drum kit challenge karasan bolot.
+
+//JQUERY
+document.querySelector("h1");
+$("h1"); //jquery
+
+$("h1").css("color", "red"); // document.querySelector dep jazgandyn orduna...
+
+document.querySelectorAll("button");
+$("button"); //jQuery ..no difference selecting one or many
+
+//        Manipulating Styles with jQuery
+$("h1").css("font-size", "5rem");
+$("h1").addClass("big-title"); // h1 big title degenge koshuldu.ayni css olcak
+$("h1").removeClass("big-title"); // emi al classtan chygyp ketti
+$("h1").addClass("bog-title margin-50"); // eki class ka koshulup aldy emi...
+$("h1").haasClass("margin-50"); // true;   tuura degen joop keldi...
+
+//        Manipulating Text with jQuery
+$("h1").text("Bye!"); // Hello degen Bye bolup kaldy
+$("button").text("Dont click me!"); // click me degen button Dont click me boldu
+$("button").html("<em>Hey</em>"); // click me degen He oldu ve bold oldu.(innerHTML)
+
+//        Manipulating Attributes with jQuery
+$("img").attr("src"); // here getting attribute
+$("a").attr("href", "https://www.yahoo.com"); // setting. a lar yahoo bolup almashty
+$("h1").attr("class"); // h1 din classyn alyp jatat. bilip yani neymis dep
+
+//       Adding Event Listeners with jQuery
+$("h1").click(function() {
+  $("h1").css("color", "purple");
+}) // h1 din colorun purple ga almashtyrdy.
+
+for (var i = 0; i < 5; i++) {
+  document.querySelectorAll("button")[i].addEventListener("click"function() {
+    document.querySelector("h1").style.color = "purple";
+  });
+} // 5 button ga for loop mn listener koidu, click kylganda button ga h1 din coloru almashsyn dep purple ga.
+
+$("button").click(function() {
+  $("h1").css("color", "purple");
+}); // jogorudagy javascript mn, a bulbolso jQuery menen ayni sey yaptik without loop.
+
+$("input").keydown(function(event) {
+  console.log(event.key);
+}); // inputka kaisy tamgany bassan korsotot.
+
+$(document).keydown(function(event) {
+  $("h1").text(event.key);
+}); // kaisy tamgany bassan h1 dagy textin orduna osho tamgany korsotot.
+
+$("h1").on("mouseover", function() {
+  $("h1").css("color", "purple");
+}); // h1 din ustuno kelsen rengi purple bolot. mouseover din orduna click jazsak dele bolot.
+
+//        Adding and Removing Elements with jQuery
+$("h1").before("<button>New</button>"); // h1 den murun  button koiduk.
+// before degendin orduna after, prepend, append desek da bolot. prepend h1 din bash jagyna koiulat.
+$("button").remove(); // button dardy rmove kyltat.
+
+//       Website Animations with jQuery
+$("button").on("click", function() {
+  $("h1").hide();
+}); // if u click any button then h1 jogolup ketet.
+
+$("button").on("click", function() {
+  $("h1").toggle();
+}); // any button dy bassan h1 jogolup kaira dagy bassan paida bolot.
+
+$("button").on("click", function() {
+  $("h1").fadeOut();
+}); // emi h1 jogolot birok sekiin.
+
+$("button").on("click", function() {
+  $("h1").fadeToggle();
+}); // h1 sekin jogolot kaira bassan kaira paida bolot.
+
+$("button").on("click", function() {
+  $("h1").slideUp();
+}); // slide gibi jogoru chygyp jogolot. slideDown dagy bar...
+
+$("button").on("click", function() {
+  $("h1").slideToggle();
+}); // slideUp and slideDown dy slideToggle ozule kylyp koetken...
+
+$("button").on("click", function() {
+  $("h1").animate({
+    opacity: 0,
+    5
+  });
+}); // sekin mutnyi bolup korunup kalatken h1. curly bracesin ichine only nueric value.
+
+$("button").on("click", function() {
+  $("h1").slideUp().slideDown().animate({
+    opacity: 0,
+    5
+  });
+}); // eger 1 den kop koigubuz kelse....
+//Command Line, Terminal, cmd
+
+
+//           Backend Web Development
+//                 Node.js
+/** pwd: kaerdesin oshonu korsotot
+ls: osherdeki file dardy korsotot.
+mkdir: new file degen
+mkdir intro-to-node: intro-to-node degen file achty desktopko.
+cd intro-to-node: filedin ichine kirdi.
+touch index.js: index.js degen file achyp aldy ichine.
+ls: ichinde ne barken dep kordum index.js dep chykty
+ node index.js: dep jazdym(it means use node to run index.js)
+ (index.js tin ichine console.log("Hello world") dep jazgamda)
+ Hello world dep chykty
+ REPL( Read Evaluation Print Loop)
+ node: dep jazdym ( now i am inside node Repl)
+ console.log("hey") desen
+ hey dep chygat
+ 3+5: desen
+ 8 deyt
+ "Aizirek " + "Dzhumanazarova": desem
+ Aizirek Dzhumanazarova dep chygat.
+ yldydagy code du anlattim......
+**/
+Lenovo @DESKTOP - 4 QBKV91 MINGW64~/Desktop
+$ pwd
+  /
+  c / Users / Lenovo / Desktop
+
+Lenovo @DESKTOP - 4 QBKV91 MINGW64~/Desktop
+$ ls
+Aizirek / Hyper.lnk * 'Visual Studio Code.lnk' * desktop.ini udemy /
+  Atom.lnk * Sourcetree.lnk * computer.lnk * git.txt
+
+Lenovo @DESKTOP - 4 QBKV91 MINGW64~/Desktop
+$ mkdir intro - to - node
+
+Lenovo @DESKTOP - 4 QBKV91 MINGW64~/Desktop
+$ cd intro - to - node /
+
+  Lenovo @DESKTOP - 4 QBKV91 MINGW64~/Desktop/intro - to - node
+$ ls
+
+Lenovo @DESKTOP - 4 QBKV91 MINGW64~/Desktop/intro - to - node
+$ touch index.js
+
+Lenovo @DESKTOP - 4 QBKV91 MINGW64~/Desktop/intro - to - node
+$ ls
+index.js
+
+Lenovo @DESKTOP - 4 QBKV91 MINGW64~/Desktop/intro - to - node
+$ node index.js
+Hello world
+
+Lenovo @DESKTOP - 4 QBKV91 MINGW64~/Desktop/intro - to - node
+$ node
+Welcome to Node.js v14 .15 .0.
+Type ".help"
+for more information. >
+  3 + 8 11 >
+  "Aizirek " + "Dzhumanazarova"
+'Aizirek Dzhumanazarova' >
+
+//              Native Node Modules
+const fs = require("fs");
+fs.copyFileSync("file1.txt", "file2.txt");
+// dep index js ke jazypaldyk anan file1.txt degen file achtyk. anan commandka:
+Lenovo @DESKTOP - 4 QBKV91 MINGW64~/Desktop
+$ ls Aizirek / Sourcetree.lnk * desktop.ini udemy /
+  Atom.lnk * 'Visual Studio Code.lnk' * git.txt Hyper.lnk * computer.lnk * intro - to - node /
+
+  Lenovo @DESKTOP - 4 QBKV91 MINGW64~/Desktop
+$ cd intro - to - node
+
+Lenovo @DESKTOP - 4 QBKV91 MINGW64~/Desktop/intro - to - node $ node index.js
+
+Lenovo @DESKTOP - 4 QBKV91 MINGW64~/Desktop/intro - to - node $ node index.js
+// dep jazdyk. node index.js degen code du run kylat. anan atomgo kirsem file2.txt
+degen file achyp koiuptur ichin da okshosh kylyp.file2 nin ichin almashtyryp kaira node index.js dep command bersem file2 nin ichi dagy file1 ge okshotup ozgortup koiuptur.
+
+//  External Node Modules.
+// npm Node Packages Manager
+/** bashynda osho file ga baryp alabyz anan...
+npm init dep jazdym
+packages-name:(intro-to-node) dedi ushu filagaby degendey enter...
+version:(1.0.0) ushu versiyabi degendey enter...
+description: dedi. This is a intro to node project dep jazdym enter...
+entry point:(index.js) dedi enter...
+test command: dedi enter...
+git repository: dedi enter...
+keywords: enter...
+author: dedi Aizirek Dzhumanazarova enter...
+license:(ISC) dedi enter...
+toltura nerse chykty. yukardaki bilgiler yani.
+Is this ok?(yes) dedi enter.. (it means yes)
+Atomdo package.json degen file achylyp jogorudagy bilgiler baryp kalyptyr.
+nmp saitka suprhero name dep izdep ve icinde install kismina yazmis. bzide
+onu commandka jazdyk. nmp install superheroes dep jazdyk ve download kyldy.
+package.json file ga da koiuptur.
+Emi index.js ke saitta jazgan Usage kismin jazdyk ve console.log("vhdchd")
+dedik. ve commandka node index.js dep jazdyk code du run kyl degen bul.
+ve commanddan: Deathery, stranger, Lizard degender chykty.**/
+
+// Express.js with Node.js
+// express.js is a framework of node.js
+mkdir my - express - server: //dep file achtyk
+  cd my - express - server: // dep file dyn ichine kirdik.
+  touch server.js: //server.js degen file achyp adyk ichine.
+  npm init: //dep Node Package Manager bashtadym enter...
+  Package - name: (my - express - server) //dogru enter...
+version: (1.0 .0) //olur enter...
+description: //My first express server. dep enter...
+  entry point: (server.js) // dedi enter...
+test command: //enter...
+  git repository: //enter...
+  keywords: //enter...
+  author: //Aizirek Dzhumanazarova enter...
+  license: (ISC) //dedi enter...
+//toltura jogorudagy bilgiler geldi...
+Is this ok ? (yes) //dedi enter...(it means yes)
+//Atomgo package.json degen file achylyptyr.
+//Commandka
+atom.: //desek biz achkan file dy atomdo achyp beret.
+  npm install express: //dep expressti download kylyp aldym.
+  //Anan expressjs saittan karap atomdogu sever.js ke
+  const express = require("express");
+const app = express();
+app.listen(3000); //jazyp aldyk. Anan commandka node server.js dedik.
+//Kaira commandka crtl c dep toktottuk.(stopped our server)
+//Serverdin kachan bashtalganyn bilish uchuun callback funtion ekledik.
+app.listen(3000, function() {
+  console.log("Server started on port 3000");
+});
+// Request, Response
+app.get("/", function(req, res) {
+  res.send("Hello");
+})
+// ushunun baaryn kylganda Hello dep saittan chykty.pff
+//  Working with Route
+app.get("/", function(req, res) {
+  res.send("Hello");
+}) app.get("/contact", function(req, res) {
+  res.send("Contact me at: aizi.zhuma@gmail.com");
+}) app.get("/about", function(req, res) {
+  res.send("I am Aizirek. I am 24 years old. I studied Chemistry.");
+})
+//birinchi parameter route eken. misaly saitka baryp /contact desen chygaryp beret.
+//    nodemon
+// nodemon du juktoisun commanddan anan ulam jany jazganyny save kylsan ele
+//otomatik olarak chygaryp beret. run kylganda nodemone server.js desh krk))
+
+//  A simple Calculator Website
+cd desktop // desktopko kelip aldık
+mkdir Calculator //Calculator degen folder achtyk
+cd Calculator / //Calculatordun ichine kirip aldyk
+  touch calculator.js //Folderdin ichine calculator.js degen file achyp aldyk
+npm init //npm init kylyp aldyk
+package name: (calculator) //enter...
+version: (1.0 .0) //enter...
+description //A simple calculator website.
+entry point: (calculator.js) //enter...
+test command //enter...
+git repository //enter...
+keywords //enter...
+author //Aizirek Dzhumanazarova
+license: (ISC) //enter...
+Is this OK ? (yes) //enter...
+atom. //atomdon achyp aldym
+npm install express //dep installed express
+calculator.js ke::::::::.
+//jshint esversion:6
+const express = require("express");
+const app = express();
+
+app.get("/", function(req, res) { // home Route
+  res.send("Hello World");
+});
+app.listen(3000, function() { // our server is running on port 3000.
+  console.log("Server is running on port 3000");
+});
+
+commandka::::
+  nodemon calculator.js // dedik
+
+// localhost:3000 dön Hello World dep chygyp kaldy
+//Emi HTML koldonbuz.
+commandka:::
+  touch index.html // dep html file achyp aldyk
+
+//anan </body> nin ustuno
+/*
+<<h1>Calculator</h1>
+<form action="/" method="post">
+<input type="text" name="n1" placeholder="First Number">
+<input type="text" name="n2" placeholder="Second Number">
+<button type="submit" name="submit">Calculate</button>
+</form>
+*/
